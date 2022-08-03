@@ -28,7 +28,7 @@ This tool is used to help market maker users to `initialize zkex account` and `a
     yarn 
     ```
 
-# Run and Interaction
+# Run and Interaction (TODO)
   ```shell
   yarn start
   ```
