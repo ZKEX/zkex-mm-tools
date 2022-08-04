@@ -6,15 +6,22 @@ import { getCurrentNetwork } from './network'
 import { deposit } from './deposit'
 import { getNetworkChainId, getNetworkLinkId, ProviderNames } from './providers'
 import { AccountState } from 'zklink-js-sdk/build/types'
+import { register } from './register'
 
 export async function balances(): Promise<AccountState['committed']['balances']> {
-  const currentAccount = await getCurrentAccount()
-  const state = await fetchAccountState(currentAccount.address)
-
-  return state.result.committed.balances
+  const state = await accountState()
+  return {
+    'ZKEX Balances': state.committed.balances[1],
+  } as any
 }
 
-export async function accountState() {
+export async function accountState(): Promise<AccountState> {
+  const currentAccount = await getCurrentAccount()
+  const state = await fetchAccountState(currentAccount.address)
+  return state.result
+}
+
+export async function checkAccountState() {
   const currentAccount = await getCurrentAccount()
   console.log('🚀 Load account state ...')
   const state = await fetchAccountState(currentAccount.address)
@@ -47,4 +54,5 @@ export async function accountState() {
     await transaction.awaitReceipt()
     const isSigningKeySet: boolean = await linkWallet.isSigningKeySet()
   }
+  await register()
 }

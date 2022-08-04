@@ -1,6 +1,6 @@
 import fetch, { Response } from 'node-fetch'
 import { AccountState } from 'zklink-js-sdk/build/types.js'
-import { L2_HOST } from '../../conf/index.js'
+import { L2_HOST } from '../../conf'
 
 export async function sendRequest<T>(method: string, params: T) {
   return fetch(`${L2_HOST}`, {
