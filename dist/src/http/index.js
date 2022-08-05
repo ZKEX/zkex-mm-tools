@@ -14,10 +14,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fetchTokens = exports.fetchAccountState = exports.sendRequest = void 0;
 const node_fetch_1 = __importDefault(require("node-fetch"));
-const index_js_1 = require("../../conf/index.js");
+const conf_1 = require("../../conf");
 function sendRequest(method, params) {
     return __awaiter(this, void 0, void 0, function* () {
-        return (0, node_fetch_1.default)(`${index_js_1.L2_HOST}`, {
+        return (0, node_fetch_1.default)(`${conf_1.L2_HOST}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

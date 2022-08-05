@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.accountState = exports.balances = void 0;
+exports.checkAccountState = exports.accountState = exports.balances = void 0;
 const secret_1 = require("./secret");
 const index_1 = require("./http/index");
 const chalk_1 = __importDefault(require("chalk"));
@@ -20,15 +20,25 @@ const wallet_1 = require("./wallet");
 const network_1 = require("./network");
 const deposit_1 = require("./deposit");
 const providers_1 = require("./providers");
+const register_1 = require("./register");
 function balances() {
     return __awaiter(this, void 0, void 0, function* () {
-        const currentAccount = yield (0, secret_1.getCurrentAccount)();
-        const state = yield (0, index_1.fetchAccountState)(currentAccount.address);
-        return state.result.committed.balances;
+        const state = yield accountState();
+        return {
+            'ZKEX Balances': state.committed.balances[1],
+        };
     });
 }
 exports.balances = balances;
 function accountState() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const currentAccount = yield (0, secret_1.getCurrentAccount)();
+        const state = yield (0, index_1.fetchAccountState)(currentAccount.address);
+        return state.result;
+    });
+}
+exports.accountState = accountState;
+function checkAccountState() {
     return __awaiter(this, void 0, void 0, function* () {
         const currentAccount = yield (0, secret_1.getCurrentAccount)();
         console.log('🚀 Load account state ...');
@@ -62,6 +72,7 @@ function accountState() {
             yield transaction.awaitReceipt();
             const isSigningKeySet = yield linkWallet.isSigningKeySet();
         }
+        yield (0, register_1.register)();
     });
 }
-exports.accountState = accountState;
+exports.checkAccountState = checkAccountState;
