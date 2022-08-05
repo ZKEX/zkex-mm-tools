@@ -34,9 +34,8 @@ This tool is used to help market maker users to `initialize zkex account` and `a
     ```
 
 # Register and Active Interaction
-  ```shell
-  yarn dev
-  ```
+  * run `yarn dev`
+
   
   * Enter your PrivateKey 
     ```shell
@@ -114,3 +113,65 @@ This tool is used to help market maker users to `initialize zkex account` and `a
     Account is locked, activate now, wait ...
     ZKEX trading enabled. ZKEX Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjoiMHhmNzBkMmRiZWRlM2U1MjFkMzE4YWFkOGQ1ZDkxYjczNWZhN2Q2MmQ4IiwiZXhwaXJlZEF0IjoxNjU5NjY4ODQzLCJpZCI6MzIsInB1YmtleSI6IjQ2NmNiMWEzNzFiYTE3YjZlYjJjNTUzYzdjYTZhMjBhMTgxNTk2ZjViODM1MDZiNWI5ZmQ3ODE4Y2IwYWY2OTMifQ.IfBkR0jI-FWOGweJTjHPRPZalTx9bGJ0wqGlz0-ojIc
     ```
+
+# Check and Query Interaction
+  
+  * Run `yarn dev`
+    ```shell
+    Choose a action. (Current: 0xf70d2dBeDe3E521D318aad8D5d91B735Fa7d62d8) (Use arrow keys)
+    > 1) Your Wallets
+      2) Account Doctor
+      3) Account Info
+      4) Balances
+      5) Deposit
+    ```
+  
+  * Choose a wallet (Use arrow keys)
+    ```shell
+    Choose a wallet (Use arrow keys)
+    > 0xf70d2dBeDe3E521D318aad8D5d91B735Fa7d62d8
+      New Wallet
+      < back
+
+    !!! Choose another wallet or create a new wallet.
+    ```
+  
+  * Account Doctor
+    ```shell
+    Load account state ...
+    Account is deposited.
+    Account is activated.
+    ZKEX trading enabled. ZKEX Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjoiMHhmNzBkMmRiZWRlM2U1MjFkMzE4YWFkOGQ1ZDkxYjczNWZhN2Q2MmQ4IiwiZXhwaXJlZEF0IjoxNjU5NjY5NzMxLCJpZCI6MzIsInB1YmtleSI6IjQ2NmNiMWEzNzFiYTE3YjZlYjJjNTUzYzdjYTZhMjBhMTgxNTk2ZjViODM1MDZiNWI5ZmQ3ODE4Y2IwYWY2OTMifQ.kNO4hx4dqhtVLpQIjwRDp6Jk3GNU3eW228r-LukR6EM
+
+    !!! Check account state in layer2, and query account login jwt-token in zkex
+    ```
+  
+  * Account Info
+    ```shell
+    ┌───────────────┬─────────────────────────────────────────────────┐
+    │    (index)    │                     Values                      │
+    ├───────────────┼─────────────────────────────────────────────────┤
+    │   AccountId   │                       12                        │
+    │  PubKeyHash   │ 'sync:fbb9c3a1db37b5db5a6a57b4a59a5ace4c751919' │
+    │ AccountStatus │                   'Activated'                   │
+    └───────────────┴─────────────────────────────────────────────────┘
+
+    !!! Check account state and query account id in layer2
+    ```
+  
+  * Balances
+    ```shell
+    ┌───────────────┬──────────────────────────────┐
+    │    (index)    │             JOE              │
+    ├───────────────┼──────────────────────────────┤
+    │ ZKEX Balances │ '10000000000000000000000000' │
+    └───────────────┴──────────────────────────────┘
+
+    !!! Query account token balances in layer2
+    ```
+  
+  * Deposit
+    ```shell
+    !!! Choose network and token and then deposit.
+    ```
+
