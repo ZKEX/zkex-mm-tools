@@ -34,7 +34,7 @@ This tool is used to help market maker users to `initialize zkex account` and `a
     ```
 
 # Register and Active Interaction
-  * run `yarn dev`
+  * Run `yarn dev`
 
   
   * Enter your PrivateKey 
