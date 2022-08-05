@@ -13,6 +13,11 @@ This tool is used to help market maker users to `initialize zkex account` and `a
     ```javascript
     export const L2_HOST = 'http://xxx.xxx.xxx.xxx:yyyy'
     ```
+  * Update configure file and set zkex api endpoint to `ZKEX_API_URL` in `conf/index.ts`
+    ```javascript
+    export const ZKEX_API_URL = 'http://xxx.xxx.xxx.xxx:yyyy'
+    ```
+    
   * Install [nvm](https://github.com/nvm-sh/nvm)
   * Install node >= 14.16.0
     ```shell
