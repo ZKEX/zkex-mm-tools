@@ -101,7 +101,7 @@ This tool is used to help market maker users to `initialize zkex account` and `a
     ```shell
     Enter a amount to deposit:
 
-    !!! Press 1000000 and Enter
+    !!! Press 10000000 and Enter
 
     Send transaction request ...
     Transaction sended, wait receipt ...
