@@ -40,7 +40,7 @@ This tool is used to help market maker users to `initialize zkex account` and `a
   * Enter your PrivateKey 
     ```shell
     ERROR You must be import web3 wallet first.
-    Secret file saved D:\zkex-mm-tools\.secret.json
+    Secret file saved /Users/zkex/Projects/zkex-mm-tools/.secret.json
     Enter your PrivateKey
   
   
