@@ -1,6 +1,6 @@
 # Introduction
 
-This tool is used to help market maker users to `initialize zkex account` and `activate zk layer2 account`.
+This tool is used to help market maker users to `initialize zkex account` and `activate zk layer2 account` **before** submitting an application to the ZKEX team to obtain your market maker `api-key` and `api-secret`.
 
 # Quick Overview (features)
 
@@ -46,6 +46,8 @@ This tool is used to help market maker users to `initialize zkex account` and `a
   
     !!! Input your privateKey and Press Enter.
     ```
+
+    **!!! Attention: Please ensure the private key of the wallet address is securely backed up, to avoid the potential loss of access to your assets in your wallet.**
 
   * Load account state
     ```shell
