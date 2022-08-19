@@ -1479,10 +1479,10 @@ yn@3.1.1:
   resolved "https://registry.npmjs.org/yn/-/yn-3.1.1.tgz#1e87401a09d767c1d5eab26a6e4c185182d2eb50"
   integrity sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
 
-zklink-js-sdk@^0.12.18:
-  version "0.12.18"
-  resolved "https://registry.npmjs.org/zklink-js-sdk/-/zklink-js-sdk-0.12.18.tgz#75053118687ceaa72154f974299066a6a3a1cf94"
-  integrity sha512-gXPNSuWI2Yfs23GPZaDtZ41QPtuFdUyVOdryqOXU6bes9dAu1dZQ9DGc8nshQR+JKnMeOSS3YFJSqssPm80q/A==
+zklink-js-sdk@^0.12.20:
+  version "0.12.20"
+  resolved "https://registry.npmjs.org/zklink-js-sdk/-/zklink-js-sdk-0.12.20.tgz#7265956dc6b9ecabbaecd5d021fcda1c1270b762"
+  integrity sha512-oKAsOV+l561CazoJ0AkXF3wGO0oYbdvKbpZTXy+HGEviefEnTHCeY6fefXvtFlhNCnGFSIp9VB73ygIdbF8bkg==
   dependencies:
     axios "^0.21.1"
     websocket "^1.0.30"

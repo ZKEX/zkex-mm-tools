@@ -11,7 +11,7 @@
     "node-fetch": "2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4",
-    "zklink-js-sdk": "^0.12.18"
+    "zklink-js-sdk": "^0.12.20"
   },
   "scripts": {
     "dev": "npx ts-node ./src/index.ts",
